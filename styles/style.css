@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:wght@100..900&family=Mulish:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:wght@100..900&family=Mulish:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+   --branco-principal: rgb(255, 255, 255);
+   --fonte-principal: "Playfair Display", serif;
+   --fonte-secundaria: "Montserrat", serif;
+   --degrade-destaque: linear-gradient(65deg, #760db7c3, 80%, #4d0d7b66);
+   --cinza-secundario: #a9a9a9;
+   --roxo-primario: rgb(112, 25, 183);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-family: var(--fonte-principal);
+   font-weight: 200;
+   color: var(--branco-principal);
+}
+
+html, body {
+   height: 100%;
+   margin: 0;
+   background: linear-gradient(135deg, rgb(65, 7, 112), #000000, 95%, rgb(86, 8, 150));
+   background-repeat: no-repeat;
+   background-size: cover;
+   overflow: hidden;
+}
+
+
+.main_index {
+   display: grid;
+   grid-template-columns: 58% 42%;
+   padding: 0 8% 3% 16%;
+}
+
+.imagem_apresentacao {
+   grid-column: 2; 
+   display: flex;
+   justify-content: start;
+   align-items: center;
+   height: 100%;
+   animation: flutuar 3s ease-in-out infinite;
+}
+@keyframes flutuar {
+   0% {
+      transform: translateY(0); 
+   }
+   50% {
+      transform: translateY(-20px);
+   }
+   100% {
+      transform: translateY(0); 
+   }
+}
+
+.imagem_apresentacao img {
+   width: 80%; 
+   height: auto; 
+   border-radius: 10px;
+}
+
+.barra_navegacao {
+   border-radius: 35px;
+   margin: 4% 15%;
+   display: flex;
+   justify-content: space-evenly;
+   flex-direction: row;
+   background: linear-gradient(to left, rgb(86, 8, 150), #00000012, 100%, rgba(86, 8, 150, 0.237));
+   height: 117px;
+   gap: 0;
+}
+
+.barra_navegacao a:first-child {
+   font-family: var(--fonte-secundaria);
+   margin-right: auto;
+   margin-left: 3em;
+   font-size: 20px;
+}
+
+.opcao_navegacao {
+   font-family: var(--fonte-secundaria);
+   display: flex;
+   align-items: center;
+   padding: 3em 10px;
+   text-decoration: none;
+   font-weight: 600;
+   color: var(--branco-principal);
+   margin-right: 3em;
+}
+
+.opcao_navegacao:hover:not(a:first-child){
+   color: var(--roxo-primario);
+}
+
+
+.hello_world{
+   background: linear-gradient(to right, #fc72ff, #4000ff, #0048ff, #4000ff, #fc72ff);
+   background-size: 200%;
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   margin: 0 0 3% 0;
+   font-size: 300%;
+   white-space: nowrap;
+   overflow: hidden;
+   border-right: 2px solid;
+   width: 0;
+   animation: escrever 2s steps(20, end) forwards;
+}
+@keyframes escrever {
+   from {
+      width: 0;
+   }
+   to {
+      width: 10ch;
+   }
+}
+
+#meu_nome{
+   margin: 4% 0;
+   font-size: 250%;
+}
+
+.container_apresentacao{
+   margin: 5px 5%;
+}
+
+.div_container{
+   margin: 2% 0;
+}
+
+.nome{
+   font-size: 350%;
+   margin: 1% 0;
+   font-weight: 800;
+   background: linear-gradient(to right, #fc72ff, #4000ff, #0048ff, #4000ff, #fc72ff);
+   background-size: 200%;
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   text-transform: uppercase;
+}
+
+.cargo{
+   font-size: 320%;
+   margin-bottom: 15px;
+}
+
+p{
+   margin-right: 5%;
+   font-size: 20px;
+   color: var(--cinza-secundario);
+}
+
+.fale_comigo {
+  margin: 3em 0;
+  padding: 2%;
+  font-size: 16px;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.622), transparent);
+  border-radius: 10px;
+  color: var(--branco-principal);
+  font-weight: 700;
+  text-transform: uppercase; /* Deixa o texto em maiúsculas */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 12px 12px 2px 1px rgba(112, 25, 183, 0.405);
+  cursor: pointer; /* Muda o cursor para mão ao passar o mouse */
+}
+
+.fale_comigo:hover {
+   background: linear-gradient(120deg,transparent,  rgba(255, 255, 255, 0.622));
+  box-shadow: 8px 15px 20px #fd72ff8d;
+  transform: scale(1.05);
+  animation: pulsar 2s infinite;
+}
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+/* SOBRE MIM */
+
+#imagem_perfil_about{
+   height: 150px;
+   width: 150px;
+}
